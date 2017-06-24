@@ -28,8 +28,8 @@ $(".btn").on("click", function() {
 
   var APIKey = "9b3663446b3b5048fe340fdc2f081a01";
 
-  var queryWeatherURL1 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location1 + '&appid=' + APIKey;
-  var queryWeatherURL2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location2 + '&appid=' + APIKey;
+  var queryWeatherURL1 = "https://api.openweathermap.org/data/2.5/forecast?q=" + location1 + '&appid=' + APIKey;
+  var queryWeatherURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + location2 + '&appid=' + APIKey;
 
    
   $.ajax({
@@ -90,8 +90,8 @@ $(".btn").on("click", function() {
 
 //ABOUT=============================================================================================    
 
-  var queryAboutURL1 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
-  var queryAboutURL2 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
+  var queryAboutURL1 = "https://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
+  var queryAboutURL2 = "https://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
 
 
   $.ajax({
