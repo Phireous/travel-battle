@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Battle!</title>
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/style.css">
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- // link to bootstrap // -->
+  	<link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”>
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="jumbotron" style="color: white;">
+		      <h1 class="text-center"><strong>Travel Battle!</strong></h1>
+		    </div>
+		</div>
+
+		<div class="row">
+			<div class="text-center">
+				<form class="navbar-form" role="search">
+				  <div class="form-group">
+				    <input type="text" class="form-control" placeholder="Location 1" id="location1">
+				  </div>
+				  <button type="submit" class="btn btn-default" id="button">VS</button>
+				  <div class="form-group">
+				    <input type="text" class="form-control" placeholder="Location 2" id="location2">
+				  </div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+	          	<div class="panel panel-default">
+		            <div class="panel-heading">
+		              <h3 class="panel-title1">Location 1</h3>
+		            </div>
+		            <div class="panel-body" id="location1-info">
+			            <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Map</h3>
+						            </div>
+						            <div class="panel-body" id="map1">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>		        
+			            <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Weather</h3>
+						            </div>
+						            <div class="panel-body" id="weather1">
+
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+				        <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">About</h3>
+						            </div>
+						            <div class="panel-body" id="about1">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+				        <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Places</h3>
+						            </div>
+						            <div class="panel-body" id="places1">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+	        	</div>
+        	</div>
+		</div>
+
+		 <div class="col-sm-6">
+	          	<div class="panel panel-default">
+		            <div class="panel-heading">
+		              <h3 class="panel-title2">Location 2</h3>
+		            </div>
+		            <div class="panel-body" id="location2-info">
+			            <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Map</h3>
+						            </div>
+						            <div class="panel-body" id="map2">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+			            <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Weather</h3>
+						            </div>
+						            <div class="panel-body" id="weather2">
+
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+				        <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">About</h3>
+						            </div>
+						            <div class="panel-body" id="about2">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+				        <div class="row">
+			            	<div class="col-sm-12">
+					          	<div class="panel panel-default">
+						            <div class="panel-heading">
+						              <h3 class="panel-title">Places</h3>
+						            </div>
+						            <div class="panel-body" id="places2">
+						              
+						            </div>
+					        	</div>
+				        	</div>
+				        </div>
+		            </div>
+	        	</div>
+        	</div>
+		</div>
+	</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<!-- Script -->
+<script src="assets/javascript.js"></script>
+
+<!--Google Maps API-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2GWjyUF3QEsxH4jZbUhVjHUxn4gj6l5E&libraries=places&callback=initAutocomplete" async defer></script>
+
+<!--Open Weather Map API-->
+<script async defer src="http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=9b3663446b3b5048fe340fdc2f081a01"></script>
+
+</body>
+</html>
